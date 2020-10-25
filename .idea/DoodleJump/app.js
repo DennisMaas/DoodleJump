@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function moveLeft (){
+        clearInterval(leftTimerId)
         if (isGoingRight) {
             clearInterval(rightTimerId)
             isGoingRight = false
@@ -148,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function moveRight  () {
+        clearInterval(rightTimerId)
         if (isGoingLeft) {
             clearInterval(leftTimerId)
             isGoingLeft = false
